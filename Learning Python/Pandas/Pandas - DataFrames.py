@@ -15,6 +15,7 @@ print(items)
 #Dataframes - ładna tabelka
 shoppingCards = pd.DataFrame(items)
 print(shoppingCards)
+
 print(shoppingCards.index)
 print("_________________________")
 print(shoppingCards.columns)
@@ -23,6 +24,7 @@ print(shoppingCards.values)
 print(shoppingCards.shape)
 
 #DataFrames - specific items
+print("XXXXXXXXXXXX")
 bob_shopping_cards = pd.DataFrame(items, columns=['Bob'])
 sel_shopping_cards = pd.DataFrame(items, index=['bike','pants'])
 
@@ -51,6 +53,7 @@ print()
 #DataFrame[column][row]
 print(store_items[['bikes']])
 print(store_items.loc[['store 1']])
+
 print(store_items['bikes']['store 2'])
 
 #Adding columns to DataFrame
@@ -84,6 +87,7 @@ print(store_items)
 #Loading data from file
 Google_stock = pd.read_csv('C:/DigitalAccelerator/Udacity/AI/Python programs/Pandas/GOOG.csv')
 type(Google_stock)
+
 Google_stock.shape
 #print first/last 5 rows / or more/less - .head(# of rows)
 Google_stock.head()
@@ -104,7 +108,8 @@ Google_stock.corr()
 data = pd.read_csv('C:/DigitalAccelerator/Udacity/AI/Python programs/Pandas/fake-company.csv')
 
 #Group data by
-data.groupby(['Year'])['Salary'].sum()
+
+print(data.groupby(['Year'])['Salary'].sum())
 data.groupby(['Year', 'Department'])['Salary'].sum()
 data.groupby(['Year'])['Salary'].mean()
 

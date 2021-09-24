@@ -18,6 +18,7 @@ print('banana' in groceries)
 print()
 
 #Accessing data
+print('XXXXXXXXXXX')
 print(groceries['eggs'])
 print()
 print(groceries[['eggs', 'milk']])
